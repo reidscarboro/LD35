@@ -1,0 +1,9 @@
+LD35/Library
+LD35/Temp
+*.csproj
+*.sln
+*.userprefs
+*.apk
+*.unityproj
+*.exe
+*.pdb
