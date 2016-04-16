@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 98a61991995bd2b468825903c42ec3e4
+timeCreated: 1460826172
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas_Game_0
+    21300002: Atlas_Game_1
+    21300004: Atlas_Game_2
+    21300006: Atlas_Game_3
+    21300008: Atlas_Game_4
+    21300010: Atlas_Game_5
+    21300012: Atlas_Game_6
+    21300014: Atlas_Game_7
+    21300016: Atlas_Game_8
+    21300018: Atlas_Game_9
+    21300020: Atlas_Game_10
+    21300022: Atlas_Game_11
+    21300024: Atlas_Game_12
+    21300026: Atlas_Game_13
+    21300028: Atlas_Game_14
+    21300030: Atlas_Game_15
+    21300032: Atlas_Game_16
+    21300034: Atlas_Game_17
+    21300036: Atlas_Game_18
+    21300038: Atlas_Game_19
+    21300040: Atlas_Game_20
+    21300042: Atlas_Game_21
+    21300044: Atlas_Game_22
+    21300046: Atlas_Game_23
+    21300048: Atlas_Game_24
+    21300050: Atlas_Game_25
+    21300052: Atlas_Game_26
+    21300054: Atlas_Game_27
+    21300056: Atlas_Game_28
+    21300058: Atlas_Game_29
+    21300060: Atlas_Game_30
+    21300062: Atlas_Game_31
+    21300064: Atlas_Game_32
+    21300066: Atlas_Game_33
+    21300068: Atlas_Game_34
+    21300070: Atlas_Game_35
+    21300072: Atlas_Game_36
+    21300074: Atlas_Game_37
+    21300076: Atlas_Game_38
+    21300078: Atlas_Game_39
+    21300080: Atlas_Game_40
+    21300082: Atlas_Game_41
+    21300084: Atlas_Game_42
+    21300086: Atlas_Game_43
+    21300088: Atlas_Game_44
+    21300090: Atlas_Game_45
+    21300092: Atlas_Game_46
+    21300094: Atlas_Game_47
+    21300096: Atlas_Game_48
+    21300098: Atlas_Game_49
+    21300100: Atlas_Game_50
+    21300102: Atlas_Game_51
+    21300104: Atlas_Game_52
+    21300106: Atlas_Game_53
+    21300108: Atlas_Game_54
+    21300110: Atlas_Game_55
+    21300112: Atlas_Game_56
+    21300114: Atlas_Game_57
+    21300116: Atlas_Game_58
+    21300118: Atlas_Game_59
+    21300120: Atlas_Game_60
+    21300122: Atlas_Game_61
+    21300124: Atlas_Game_62
+    21300126: Atlas_Game_63
+    21300128: Atlas_Game_64
+    21300130: Atlas_Game_65
+    21300132: Atlas_Game_66
+    21300134: Atlas_Game_67
+    21300136: Atlas_Game_68
+    21300138: Atlas_Game_69
+    21300140: Atlas_Game_70
+    21300142: Atlas_Game_71
+    21300144: Atlas_Game_72
+    21300146: Atlas_Game_73
+    21300148: Atlas_Game_74
+    21300150: Atlas_Game_75
+    21300152: Atlas_Game_76
+    21300154: Atlas_Game_77
+    21300156: Atlas_Game_78
+    21300158: Atlas_Game_79
+    21300160: Atlas_Game_80
+    21300162: Atlas_Game_81
+    21300164: Atlas_Game_82
+    21300166: Atlas_Game_83
+    21300168: Atlas_Game_84
+    21300170: Atlas_Game_85
+    21300172: Atlas_Game_86
+    21300174: Atlas_Game_87
+    21300176: Atlas_Game_88
+    21300178: Atlas_Game_89
+    21300180: Atlas_Game_90
+    21300182: Atlas_Game_91
+    21300184: Atlas_Game_92
+    21300186: Atlas_Game_93
+    21300188: Atlas_Game_94
+    21300190: Atlas_Game_95
+    21300192: Atlas_Game_96
+    21300194: Atlas_Game_97
+    21300196: Atlas_Game_98
+    21300198: Atlas_Game_99
+    21300200: Atlas_Game_100
+    21300202: Atlas_Game_101
+    21300204: Atlas_Game_102
+    21300206: Atlas_Game_103
+    21300208: Atlas_Game_104
+    21300210: Atlas_Game_105
+    21300212: Atlas_Game_106
+    21300214: Atlas_Game_107
+    21300216: Atlas_Game_108
+    21300218: Atlas_Game_109
+    21300220: Atlas_Game_110
+    21300222: Atlas_Game_111
+    21300224: Atlas_Game_112
+    21300226: Atlas_Game_113
+    21300228: Atlas_Game_114
+    21300230: Atlas_Game_115
+    21300232: Atlas_Game_116
+    21300234: Atlas_Game_117
+    21300236: Atlas_Game_118
+    21300238: Atlas_Game_119
+    21300240: Atlas_Game_120
+    21300242: Atlas_Game_121
+    21300244: Atlas_Game_122
+    21300246: Atlas_Game_123
+    21300248: Atlas_Game_124
+    21300250: Atlas_Game_125
+    21300252: Atlas_Game_126
+    21300254: Atlas_Game_127
+    21300256: Atlas_Game_128
+    21300258: Atlas_Game_129
+    21300260: Atlas_Game_130
+    21300262: Atlas_Game_131
+    21300264: Atlas_Game_132
+    21300266: Atlas_Game_133
+    21300268: Atlas_Game_134
+    21300270: Atlas_Game_135
+    21300272: Atlas_Game_136
+    21300274: Atlas_Game_137
+    21300276: Atlas_Game_138
+    21300278: Atlas_Game_139
+    21300280: Atlas_Game_140
+    21300282: Atlas_Game_141
+    21300284: Atlas_Game_142
+    21300286: Atlas_Game_143
+    21300288: Atlas_Game_144
+    21300290: Atlas_Game_145
+    21300292: Atlas_Game_146
+    21300294: Atlas_Game_147
+    21300296: Atlas_Game_148
+    21300298: Atlas_Game_149
+    21300300: Atlas_Game_150
+    21300302: Atlas_Game_151
+    21300304: Atlas_Game_152
+    21300306: Atlas_Game_153
+    21300308: Atlas_Game_154
+    21300310: Atlas_Game_155
+    21300312: Atlas_Game_156
+    21300314: Atlas_Game_157
+    21300316: Atlas_Game_158
+    21300318: Atlas_Game_159
+    21300320: Atlas_Game_160
+    21300322: Atlas_Game_161
+    21300324: Atlas_Game_162
+    21300326: Atlas_Game_163
+    21300328: Atlas_Game_164
+    21300330: Atlas_Game_165
+    21300332: Atlas_Game_166
+    21300334: Atlas_Game_167
+    21300336: Atlas_Game_168
+    21300338: Atlas_Game_169
+    21300340: Atlas_Game_170
+    21300342: Atlas_Game_171
+    21300344: Atlas_Game_172
+    21300346: Atlas_Game_173
+    21300348: Atlas_Game_174
+    21300350: Atlas_Game_175
+    21300352: Atlas_Game_176
+    21300354: Atlas_Game_177
+    21300356: Atlas_Game_178
+    21300358: Atlas_Game_179
+    21300360: Atlas_Game_180
+    21300362: Atlas_Game_181
+    21300364: Atlas_Game_182
+    21300366: Atlas_Game_183
+    21300368: Atlas_Game_184
+    21300370: Atlas_Game_185
+    21300372: Atlas_Game_186
+    21300374: Atlas_Game_187
+    21300376: Atlas_Game_188
+    21300378: Atlas_Game_189
+    21300380: Atlas_Game_190
+    21300382: Atlas_Game_191
+    21300384: Atlas_Game_192
+    21300386: Atlas_Game_193
+    21300388: Atlas_Game_194
+    21300390: Atlas_Game_195
+    21300392: Atlas_Game_196
+    21300394: Atlas_Game_197
+    21300396: Atlas_Game_198
+    21300398: Atlas_Game_199
+    21300400: Atlas_Game_200
+    21300402: Atlas_Game_201
+    21300404: Atlas_Game_202
+    21300406: Atlas_Game_203
+    21300408: Atlas_Game_204
+    21300410: Atlas_Game_205
+    21300412: Atlas_Game_206
+    21300414: Atlas_Game_207
+    21300416: Atlas_Game_208
+    21300418: Atlas_Game_209
+    21300420: Atlas_Game_210
+    21300422: Atlas_Game_211
+    21300424: Atlas_Game_212
+    21300426: Atlas_Game_213
+    21300428: Atlas_Game_214
+    21300430: Atlas_Game_215
+    21300432: Atlas_Game_216
+    21300434: Atlas_Game_217
+    21300436: Atlas_Game_218
+    21300438: Atlas_Game_219
+    21300440: Atlas_Game_220
+    21300442: Atlas_Game_221
+    21300444: Atlas_Game_222
+    21300446: Atlas_Game_223
+    21300448: Atlas_Game_224
+    21300450: Atlas_Game_225
+    21300452: Atlas_Game_226
+    21300454: Atlas_Game_227
+    21300456: Atlas_Game_228
+    21300458: Atlas_Game_229
+    21300460: Atlas_Game_230
+    21300462: Atlas_Game_231
+    21300464: Atlas_Game_232
+    21300466: Atlas_Game_233
+    21300468: Atlas_Game_234
+    21300470: Atlas_Game_235
+    21300472: Atlas_Game_236
+    21300474: Atlas_Game_237
+    21300476: Atlas_Game_238
+    21300478: Atlas_Game_239
+    21300480: Atlas_Game_240
+    21300482: Atlas_Game_241
+    21300484: Atlas_Game_242
+    21300486: Atlas_Game_243
+    21300488: Atlas_Game_244
+    21300490: Atlas_Game_245
+    21300492: Atlas_Game_246
+    21300494: Atlas_Game_247
+    21300496: Atlas_Game_248
+    21300498: Atlas_Game_249
+    21300500: Atlas_Game_250
+    21300502: Atlas_Game_251
+    21300504: Atlas_Game_252
+    21300506: Atlas_Game_253
+    21300508: Atlas_Game_254
+    21300510: Atlas_Game_255
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    sprites:
+    - name: Atlas_Game_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
