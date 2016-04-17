@@ -46,7 +46,7 @@ public class Player : Killable {
     private CircleCollider2D collider;
 
     protected override void Kill() {
-        SceneManager.LoadScene(0);
+        GameController.GameOver();
     }
 
     void Start () {

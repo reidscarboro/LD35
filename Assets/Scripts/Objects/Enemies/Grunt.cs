@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Grunt : Killable {
+public class Grunt : Enemy {
 
     public SpriteRenderer grunt_idle;
     public SpriteRenderer grunt_dead;
@@ -15,6 +15,7 @@ public class Grunt : Killable {
     protected override void Kill() {
         grunt_dead.transform.SetParent(null);
         grunt_dead.gameObject.SetActive(true);
+        base.Kill();
         Destroy(gameObject);
     }
 
@@ -69,7 +70,6 @@ public class Grunt : Killable {
         bowRotationVector.z = 0;
         bowRotationVector.Normalize();
         bowRotationVector *= 2f;
-        if (!Physics2D.Raycast(transform.position + bowRotationVector, bowRotationVector, 25, enemyLayer))
-            ObjectController.CreateArrow(transform.position + bowRotationVector, bowRotationVector, 50);
+        ObjectController.CreateEnemyArrow(transform.position + bowRotationVector, bowRotationVector, 50);
     }
 }

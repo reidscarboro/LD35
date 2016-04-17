@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 98a61991995bd2b468825903c42ec3e4
-timeCreated: 1460863592
+timeCreated: 1460888774
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -263,6 +263,7 @@ TextureImporter:
     21300512: Atlas_Game_29
     21300514: Atlas_Game_31
     21300516: Atlas_Game_32
+    21300518: Atlas_Game_40
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -880,6 +881,17 @@ TextureImporter:
         - {x: 22, y: 3}
         - {x: 24, y: 8}
         - {x: 24, y: 56}
+    - name: Atlas_Game_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

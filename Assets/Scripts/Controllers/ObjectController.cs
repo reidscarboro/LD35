@@ -7,6 +7,7 @@ public class ObjectController : MonoBehaviour {
 
     public Player player;
     public Arrow arrow;
+    public Arrow enemyArrow;
     public GameObject arrowHit;
 
 	void Start () {
@@ -17,6 +18,13 @@ public class ObjectController : MonoBehaviour {
         Vector2 angleVector = direction;
         angleVector.y *= -1;
         Arrow newArrow = (Arrow) Instantiate(instance.arrow, position, Quaternion.AngleAxis(Utils.Angle(angleVector) - 90, Vector3.forward));
+        newArrow.Spawn(direction, velocity);
+    }
+
+    public static void CreateEnemyArrow(Vector3 position, Vector2 direction, float velocity) {
+        Vector2 angleVector = direction;
+        angleVector.y *= -1;
+        Arrow newArrow = (Arrow)Instantiate(instance.enemyArrow, position, Quaternion.AngleAxis(Utils.Angle(angleVector) - 90, Vector3.forward));
         newArrow.Spawn(direction, velocity);
     }
 

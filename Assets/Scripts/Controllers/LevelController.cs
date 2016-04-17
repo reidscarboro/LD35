@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour {
     public int ceilingHeight = 50;
 
     public List<GameObject> trees;
+    public List<Enemy> groundEnemies;
 
     public BoxCollider2D groundCollider;
     public GameObject ground_TL;
@@ -20,9 +21,8 @@ public class LevelController : MonoBehaviour {
     public GameObject ground_B;
     public GameObject ground_BR;
 
-    // Use this for initialization
     void Start () {
-        BuildLevel(0);
+        BuildLevel(GameController.GetLevelIndex());
 	}
 
     private void BuildLevel(int level) {
@@ -57,6 +57,7 @@ public class LevelController : MonoBehaviour {
                         } else {
                             Instantiate(ground_T, tilePosition + tileOffset, Quaternion.identity);
                             TryNewTree(tilePosition + tileOffset);
+                            TryNewGroundEnemy(tilePosition + tileOffset);
                         }
                     } else if (y == 1) {
                         if (x == 1) {
@@ -93,11 +94,27 @@ public class LevelController : MonoBehaviour {
         Camera.main.GetComponent<FollowCamera>().maxY = ceilingHeight;
         Camera.main.GetComponent<FollowCamera>().maxX = width;
 
+        GameController.DoneLoading();
+
     }
 
     public void TryNewTree(Vector3 groundTile) {
         if (Random.Range(0, 1.0f) > 0.6f) {
-            GameObject tree = (GameObject) Instantiate(trees[Random.Range(0, trees.Count)], groundTile + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            Instantiate(trees[Random.Range(0, trees.Count)], groundTile + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        }
+    }
+
+    public void TryNewGroundEnemy(Vector3 groundTile) {
+        List<Enemy> potentialEnemies = new List<Enemy>();
+        foreach (Enemy enemy in groundEnemies) {
+            if (enemy.minLevelToAppear <= GameController.GetLevelIndex()) {
+                potentialEnemies.Add(enemy);
+            }
+        }
+
+        if (Random.Range(0, 1.0f) > 0.9f) {
+            Instantiate(potentialEnemies[Random.Range(0, potentialEnemies.Count)], groundTile + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            GameController.IncrementEnemies();
         }
     }
 }

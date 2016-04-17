@@ -5,11 +5,11 @@ public class ChargePlayer : MonoBehaviour {
 
     public Rigidbody2D body;
     public BoxCollider2D collider;
-    public float jumpForce = 500;
-    public float runForce = 500;
+    public float jumpForce = 1500;
+    public float runForce = 60;
     private bool grounded = false;
     private float groundCheckOffset = 0.05f;
-    public float horizontalDamping = 0.5f;
+    public float horizontalDamping = 0.8f;
 
     private float previousPositionX = 100;
 
