@@ -10,6 +10,10 @@ public class Killable : MonoBehaviour {
         if (health <= 0) {
             Kill();
         }
+        Wakeable wakeable = GetComponent<Wakeable>();
+        if (wakeable != null) {
+            wakeable.awake = true;
+        }
     }
 
     protected virtual void Kill() {

@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Grunt : Enemy {
 
-    public SpriteRenderer grunt_idle;
-    public SpriteRenderer grunt_dead;
+    public Wakeable wakeable;
+
+    public SpriteRenderer grunt_sleep;
+    public SpriteRenderer grunt_awake;
     public SpriteRenderer crossbow;
 
     private float cooldownCounter = 0;
@@ -13,8 +15,6 @@ public class Grunt : Enemy {
     public LayerMask enemyLayer;
 
     protected override void Kill() {
-        grunt_dead.transform.SetParent(null);
-        grunt_dead.gameObject.SetActive(true);
         base.Kill();
         Destroy(gameObject);
     }
@@ -25,13 +25,18 @@ public class Grunt : Enemy {
 
     // Update is called once per frame
     void Update () {
-        UpdateGruntOrientation();
-        UpdateGruntOrientation();
-        if (cooldownCounter > shootCooldown) {
-            cooldownCounter = 0;
-            Shoot();
-        } else {
-            cooldownCounter += Time.deltaTime;
+        if (wakeable.awake) {
+
+            if (!grunt_awake.gameObject.activeInHierarchy) grunt_awake.gameObject.SetActive(true);
+            if (grunt_sleep.gameObject.activeInHierarchy) grunt_sleep.gameObject.SetActive(false);
+
+            UpdateGruntOrientation();
+            if (cooldownCounter > shootCooldown) {
+                cooldownCounter = 0;
+                Shoot();
+            } else {
+                cooldownCounter += Time.deltaTime;
+            }
         }
     }
 
@@ -50,14 +55,14 @@ public class Grunt : Enemy {
         bowRotationVector.y *= -1;
 
         if (bowRotationVector.x < 0) {
-            grunt_idle.flipX = true;
-            grunt_dead.flipX = true;
+            grunt_sleep.flipX = true;
+            grunt_awake.flipX = true;
             crossbow.flipX = true;
             crossbow.sortingOrder = -1;
             crossbow.transform.rotation = Quaternion.AngleAxis(Utils.Angle(bowRotationVector) + 90, Vector3.forward);
         } else {
-            grunt_idle.flipX = false;
-            grunt_dead.flipX = false;
+            grunt_sleep.flipX = false;
+            grunt_awake.flipX = false;
             crossbow.flipX = false;
             crossbow.sortingOrder = 1;
             crossbow.transform.rotation = Quaternion.AngleAxis(Utils.Angle(bowRotationVector) - 90, Vector3.forward);
@@ -69,7 +74,8 @@ public class Grunt : Enemy {
         Vector3 bowRotationVector = GetToPlayerAngle(true);
         bowRotationVector.z = 0;
         bowRotationVector.Normalize();
-        bowRotationVector *= 2f;
+        bowRotationVector *= 1.5f;
         ObjectController.CreateEnemyArrow(transform.position + bowRotationVector, bowRotationVector, 50);
+        SoundController.PlayArrowShoot();
     }
 }

@@ -23,6 +23,10 @@ public class Player : Killable {
     public float gravityScale_bird = 1;
     public float gravityScale_person = 4;
 
+    private bool shotQueued = false;
+    private float fireRate = 0.5f;
+    private float fireCooldown = 0;
+
 
     private Form form;
     private bool moving = false;
@@ -45,8 +49,14 @@ public class Player : Killable {
     private Rigidbody2D body;
     private CircleCollider2D collider;
 
+    private float footstepTimer = 0;
+    private float footstepFrequency = 0.4f;
+
+    private bool dead = false;
+
     protected override void Kill() {
         GameController.GameOver();
+        dead = true;
     }
 
     void Start () {
@@ -59,6 +69,23 @@ public class Player : Killable {
 	}
 	
     void FixedUpdate() {
+
+        if (dead) return;
+
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && form == Form.PERSON && grounded) {
+            if (footstepTimer == 0) {
+                SoundController.PlayFootstep();
+                footstepTimer += Time.fixedDeltaTime;
+            } else {
+                footstepTimer += Time.fixedDeltaTime;
+                if (footstepTimer > footstepFrequency) {
+                    footstepTimer = 0;
+                }
+            }
+        } else {
+            footstepTimer = 0;
+        }
+
         if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
             if (form == Form.PERSON || !grounded) {
                 body.AddForce(new Vector2(-moveForce, 0));
@@ -92,6 +119,8 @@ public class Player : Killable {
     }
 
     void Update() {
+        if (dead) return;
+
         if (Input.GetKeyDown(KeyCode.Space) && (jumpAvailable || form == Form.BIRD)) {
             Jump();
         }
@@ -101,7 +130,17 @@ public class Player : Killable {
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            Shoot();
+            if (fireCooldown < 0.2f) shotQueued = true;
+        }
+
+        if (fireCooldown <= 0) {
+            if (shotQueued) {
+                Shoot();
+                fireCooldown = fireRate;
+                shotQueued = false;
+            }
+        } else {
+            fireCooldown -= Time.deltaTime;
         }
 
         UpdatePlayerOrientation();
@@ -194,6 +233,7 @@ public class Player : Killable {
             bowRotationVector.z = 0;
             bowRotationVector.Normalize();
             ObjectController.CreateArrow(transform.position + bowRotationVector, bowRotationVector, 50);
+            SoundController.PlayArrowShoot();
         }
     }
 
@@ -205,6 +245,9 @@ public class Player : Killable {
             }
             bird_flap.gameObject.SetActive(false);
             bird_flap.gameObject.SetActive(true);
+            SoundController.PlayJumpBird();
+        } else {
+            SoundController.PlayJumpPerson();
         }
         grounded = false;
     }
@@ -235,6 +278,7 @@ public class Player : Killable {
             }
         }
         UpdatePlayerDisplay();
+        SoundController.PlayShapeshift();
     }
 
     private void SetForm(Form _form) {

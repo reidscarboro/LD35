@@ -19,6 +19,7 @@ public class Arrow : MonoBehaviour {
         gameObject.SetActive(false);
         ObjectController.CreateArrowHit(transform.position, transform.rotation, coll.gameObject.transform);
         Killable killable = coll.gameObject.GetComponent<Killable>();
+        SoundController.PlayArrowHit();
         if (killable != null) killable.Damage(5);
         Destroy(gameObject);
     }

@@ -15,11 +15,18 @@ public class GameController : MonoBehaviour {
     public static GameController instance;
 
     private SCENE_STATE sceneState = SCENE_STATE.GAME;
-    private int levelIndex = 0;
-
+    private int numLevels = 3;
+    private int level = 0;
 
     private bool loaded = false;
     private int enemiesRemaining = 0;
+
+    private float transitionTime = 1.5f;
+    private float transitionTimer = 0;
+    private bool levelComplete = false;
+    private bool gameOver = false;
+
+    private bool onGameOverScreen = false;
 
 
     void Awake() {
@@ -28,13 +35,39 @@ public class GameController : MonoBehaviour {
         } else {
             instance = this;
             DontDestroyOnLoad(transform.gameObject);
-            LoadLevel();
         }
     }
 
     void Update() {
-        if (loaded && enemiesRemaining <= 0) { 
-            NextLevel();
+        if (instance.onGameOverScreen) {
+            if (Input.anyKey) {
+                LoadLevel();
+            }
+        } else {
+            if (loaded && enemiesRemaining <= 0 && !instance.levelComplete && !gameOver) {
+                SoundController.PlayLevelComplete();
+                instance.levelComplete = true;
+            } else if (instance.levelComplete) {
+                if (instance.transitionTimer > instance.transitionTime) {
+                    instance.transitionTimer = 0;
+                    NextLevel();
+                } else {
+                    instance.transitionTimer += Time.deltaTime;
+                }
+            } else if (instance.gameOver) {
+                if (instance.transitionTimer > instance.transitionTime) {
+                    instance.transitionTimer = 0;
+                    if (GetLevelIndex() > 0) {
+                        instance.level = 1;
+                    } else {
+                        instance.level = 0;
+                    }
+                    instance.gameOver = false;
+                    LoadEndGameScreen();
+                } else {
+                    instance.transitionTimer += Time.deltaTime;
+                }
+            }
         }
     }
 
@@ -43,27 +76,44 @@ public class GameController : MonoBehaviour {
     }
 
     public static void LoadLevel() {
+        instance.onGameOverScreen = false;
         instance.sceneState = SCENE_STATE.GAME;
         instance.enemiesRemaining = 0;
         instance.loaded = false;
+        instance.levelComplete = false;
         SceneManager.LoadScene("game");
     }
 
+    public static void LoadEndGameScreen() {
+        instance.onGameOverScreen = true;
+        SceneManager.LoadScene("gameOver");
+    }
+
     public static int GetLevelIndex() {
-        return instance.levelIndex;
+        if (instance.level == 0) return 0;
+        int levelIndex = instance.level % instance.numLevels;
+        if (levelIndex == 0) levelIndex = instance.numLevels;
+        return levelIndex;
+    }
+
+    public static int GetDifficulty() {
+        return (int) (instance.level / instance.numLevels);
+    }
+
+    public static int GetNumLevels() {
+        return instance.numLevels;
+    }
+
+    public static int GetRawLevel() {
+        return instance.level;
     }
 
     public static void GameOver() {
-        NewGame();
-    }
-
-    public static void NewGame() {
-        instance.levelIndex = 0;
-        LoadLevel();
+        instance.gameOver = true;
     }
 
     public static void NextLevel() {
-        instance.levelIndex++;
+        instance.level++;
         LoadLevel();
     }
 

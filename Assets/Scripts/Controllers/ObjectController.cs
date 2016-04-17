@@ -9,6 +9,7 @@ public class ObjectController : MonoBehaviour {
     public Arrow arrow;
     public Arrow enemyArrow;
     public GameObject arrowHit;
+    public Fireball fireball;
 
 	void Start () {
         instance = this;
@@ -26,6 +27,11 @@ public class ObjectController : MonoBehaviour {
         angleVector.y *= -1;
         Arrow newArrow = (Arrow)Instantiate(instance.enemyArrow, position, Quaternion.AngleAxis(Utils.Angle(angleVector) - 90, Vector3.forward));
         newArrow.Spawn(direction, velocity);
+    }
+
+    public static void CreateFireball(Vector3 position, Vector2 direction, float velocity) {
+        Fireball newFireball = (Fireball)Instantiate(instance.fireball, position, Quaternion.identity);
+        newFireball.Spawn(direction, velocity);
     }
 
     public static void CreateArrowHit(Vector3 position, Quaternion rotation, Transform parent) {
