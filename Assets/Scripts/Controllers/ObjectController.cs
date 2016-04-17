@@ -5,6 +5,7 @@ public class ObjectController : MonoBehaviour {
 
     protected static ObjectController instance;
 
+    public Player player;
     public Arrow arrow;
     public GameObject arrowHit;
 
@@ -22,5 +23,13 @@ public class ObjectController : MonoBehaviour {
     public static void CreateArrowHit(Vector3 position, Quaternion rotation, Transform parent) {
         GameObject newArrowHit = (GameObject) Instantiate(instance.arrowHit, position, rotation);
         newArrowHit.transform.SetParent(parent);
+    }
+
+    public static void SetPlayer(Player _player) {
+        instance.player = _player;
+    }
+
+    public static Player GetPlayer() {
+        return instance.player;
     }
 }

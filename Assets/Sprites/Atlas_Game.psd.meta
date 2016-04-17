@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 98a61991995bd2b468825903c42ec3e4
-timeCreated: 1460826172
+timeCreated: 1460863592
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,10 +33,10 @@ TextureImporter:
     21300052: Atlas_Game_26
     21300054: Atlas_Game_27
     21300056: Atlas_Game_28
-    21300058: Atlas_Game_29
+    21300058: G11
     21300060: Atlas_Game_30
-    21300062: Atlas_Game_31
-    21300064: Atlas_Game_32
+    21300062: G13
+    21300064: G14
     21300066: Atlas_Game_33
     21300068: Atlas_Game_34
     21300070: Atlas_Game_35
@@ -44,7 +44,7 @@ TextureImporter:
     21300074: Atlas_Game_37
     21300076: Atlas_Game_38
     21300078: Atlas_Game_39
-    21300080: Atlas_Game_40
+    21300080: G12
     21300082: Atlas_Game_41
     21300084: Atlas_Game_42
     21300086: Atlas_Game_43
@@ -260,6 +260,9 @@ TextureImporter:
     21300506: Atlas_Game_253
     21300508: Atlas_Game_254
     21300510: Atlas_Game_255
+    21300512: Atlas_Game_29
+    21300514: Atlas_Game_31
+    21300516: Atlas_Game_32
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -319,7 +322,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_1
@@ -330,7 +333,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_2
@@ -341,7 +344,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_3
@@ -352,7 +355,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_4
@@ -363,7 +366,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_5
@@ -374,7 +377,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_6
@@ -385,7 +388,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_7
@@ -396,7 +399,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_8
@@ -407,7 +410,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_9
@@ -418,7 +421,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_10
@@ -429,7 +432,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_11
@@ -440,7 +443,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_12
@@ -451,7 +454,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_13
@@ -462,7 +465,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_14
@@ -473,7 +476,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_15
@@ -484,7 +487,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Atlas_Game_16
@@ -495,9 +498,388 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: Atlas_Game_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: G11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 16}
+        - {x: -11, y: 16}
+        - {x: -11, y: -16}
+        - {x: 11, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 6}
+        - {x: 13, y: 13}
+    - name: Atlas_Game_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.800003, y: 8.399994}
+        - {x: 5.800003, y: 8.399994}
+        - {x: -1.199997, y: 0.3999939}
+        - {x: -1.199997, y: -10.600006}
+        - {x: 3.800003, y: -13.600006}
+        - {x: 13.800003, y: -13.600006}
+        - {x: 20.800003, y: -6.600006}
+        - {x: 20.800003, y: 2.399994}
+    - name: G13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 15}
+        - {x: -9, y: 14}
+        - {x: -11, y: 10}
+        - {x: -11, y: -8}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 14, y: -10}
+        - {x: 14, y: 10}
+        - {x: 7, y: 15}
+    - name: G14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 16}
+        - {x: -8, y: 15}
+        - {x: -11, y: 13}
+        - {x: -11, y: -16}
+        - {x: 10, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 9}
+        - {x: 11, y: 16}
+    - name: Atlas_Game_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 32
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_34
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 32
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 32
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 16}
+        - {x: -11, y: 16}
+        - {x: -11, y: -16}
+        - {x: 11, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 6}
+        - {x: 13, y: 13}
+    - name: Atlas_Game_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 106
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 16}
+        - {x: -11, y: 16}
+        - {x: -11, y: -16}
+        - {x: 11, y: -16}
+        - {x: 14, y: -9}
+        - {x: 14, y: 6}
+        - {x: 13, y: 13}
+    - name: Atlas_Game_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 106
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -10, y: 15}
+        - {x: -10, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 16}
+    - name: Atlas_Game_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 106
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 16}
+        - {x: -10, y: 15}
+        - {x: -10, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 16}
+    - name: G12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 16}
+        - {x: -8, y: 15}
+        - {x: -11, y: 13}
+        - {x: -11, y: -16}
+        - {x: 10, y: -16}
+        - {x: 14, y: -12}
+        - {x: 14, y: 12}
+        - {x: 13, y: 16}
+    - name: Atlas_Game_29
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 48
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 80}
+        - {x: -24, y: 0}
+        - {x: 24, y: 0}
+        - {x: 24, y: 78}
+        - {x: 14, y: 80}
+    - name: Atlas_Game_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 176
+        width: 32
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 48}
+        - {x: -16, y: 0}
+        - {x: 14, y: 0}
+        - {x: 16, y: 11}
+        - {x: 16, y: 48}
+    - name: Atlas_Game_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 176
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 56}
+        - {x: -24, y: 22}
+        - {x: -17, y: 2}
+        - {x: -15, y: 0}
+        - {x: 23, y: 0}
+        - {x: 22, y: 3}
+        - {x: 24, y: 8}
+        - {x: 24, y: 56}
     outline: []
   spritePackingTag: 
   userData: 

@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour {
+public class Player : Killable {
 
     public enum Form {
         BIRD,
         PERSON
     };
+
+    public GameObject cameraFollowObject;
 
     //variables
     public float horizontalDamping = 0.5f;
@@ -40,12 +43,17 @@ public class Player : MonoBehaviour {
 
     //components
     private Rigidbody2D body;
-    private BoxCollider2D collider;
+    private CircleCollider2D collider;
 
-	void Start () {
-        Camera.main.GetComponent<FollowCamera>().SetTarget(transform);
+    protected override void Kill() {
+        SceneManager.LoadScene(0);
+    }
+
+    void Start () {
+        ObjectController.SetPlayer(this);
+        Camera.main.GetComponent<FollowCamera>().SetTarget(cameraFollowObject.transform);
         body = GetComponent<Rigidbody2D>();
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CircleCollider2D>();
 
         SetForm(Form.PERSON);
 	}
@@ -97,6 +105,7 @@ public class Player : MonoBehaviour {
         }
 
         UpdatePlayerOrientation();
+        UpdateCameraFollowObject();
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
@@ -105,6 +114,14 @@ public class Player : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D coll) {
          GroundCheck();
+    }
+
+    private void UpdateCameraFollowObject() {
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 cameraFollowOffset = mouseWorldPosition - transform.position;
+        cameraFollowOffset.z = 0;
+        cameraFollowOffset *= 0.25f;
+        cameraFollowObject.transform.localPosition = cameraFollowOffset;
     }
 
     private void UpdatePlayerOrientation() {
@@ -176,8 +193,7 @@ public class Player : MonoBehaviour {
             Vector3 bowRotationVector = mouseWorldPosition - transform.position;
             bowRotationVector.z = 0;
             bowRotationVector.Normalize();
-            bowRotationVector *= 1.5f;
-            ObjectController.CreateArrow(transform.position + bowRotationVector, bowRotationVector, 30);
+            ObjectController.CreateArrow(transform.position + bowRotationVector, bowRotationVector, 50);
         }
     }
 
@@ -194,8 +210,8 @@ public class Player : MonoBehaviour {
     }
 
     private void GroundCheck() {
-        Vector2 left = new Vector2(transform.position.x - collider.size.x / 2 + 0.01f, transform.position.y - collider.size.y / 2 - groundCheckOffset);
-        Vector2 right = new Vector2(transform.position.x + collider.size.x / 2 - 0.01f, transform.position.y - collider.size.y / 2 - groundCheckOffset);
+        Vector2 left = new Vector2(transform.position.x - collider.radius / 2, transform.position.y - collider.radius - groundCheckOffset);
+        Vector2 right = new Vector2(transform.position.x + collider.radius / 2, transform.position.y - collider.radius - groundCheckOffset);
         RaycastHit2D raycast = Physics2D.Linecast(left, right);
         grounded = raycast;
         jumpAvailable = grounded;
@@ -212,7 +228,11 @@ public class Player : MonoBehaviour {
             SetForm(Form.PERSON);
         }
         if (grounded && form == Form.BIRD) {
-            body.velocity = new Vector2();
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) {
+                Jump();
+            } else {
+                body.velocity = new Vector2();
+            }
         }
         UpdatePlayerDisplay();
     }
