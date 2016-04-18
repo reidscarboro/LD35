@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 98a61991995bd2b468825903c42ec3e4
-timeCreated: 1460929783
+timeCreated: 1460940429
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1109,6 +1109,17 @@ TextureImporter:
         y: 72
         width: 144
         height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Atlas_Game_52
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 18
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -12,6 +12,8 @@ public class FollowCamera : MonoBehaviour {
     public int minX;
     public int maxX;
 
+    private bool shake = false;
+
     void Start() {
         z = transform.position.z;
     }
@@ -22,6 +24,15 @@ public class FollowCamera : MonoBehaviour {
             Vector3 targetPosition = new Vector3(target.position.x, target.position.y, z);
             if (Vector3.Distance(transform.position, targetPosition)> 0.005f) {
                 newPosition = Vector3.Lerp(transform.position, targetPosition, lerpSpeed);
+
+                if (shake) {
+                    Vector3 shakeAmount = Utils.Rotate(Vector2.up, Random.Range(0, 360));
+                    shakeAmount *= 0.2f;
+                    newPosition += shakeAmount;
+                    shake = false;
+                }
+
+
                 if (newPosition.y - Camera.main.orthographicSize < minY) newPosition.y = minY + Camera.main.orthographicSize;
                 if (newPosition.y + Camera.main.orthographicSize > maxY) newPosition.y = maxY - Camera.main.orthographicSize;
 
@@ -34,6 +45,10 @@ public class FollowCamera : MonoBehaviour {
             }
 
         }
+    }
+
+    public void Shake() {
+        shake = true;
     }
 
     public void SetTarget(Transform _target) {

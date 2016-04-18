@@ -14,6 +14,6 @@ public class FadeOverTime : MonoBehaviour {
     void Update() {
         life -= Time.deltaTime;
         if (life < 0) Destroy(this);
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, life / lifeSpan);
+        if (spriteRenderer != null) spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, life / lifeSpan);
     }
 }

@@ -39,8 +39,13 @@ public class GameController : MonoBehaviour {
     }
 
     void Update() {
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
         if (instance.onGameOverScreen) {
-            if (Input.anyKey) {
+            if (Input.anyKeyDown) {
                 LoadLevel();
             }
         } else {

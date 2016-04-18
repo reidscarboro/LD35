@@ -12,6 +12,7 @@ public class Fireball : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll) {
         gameObject.SetActive(false);
         Killable killable = coll.gameObject.GetComponent<Killable>();
+        SoundController.PlayArrowHit();
         if (killable != null) killable.Damage(5);
         Destroy(gameObject);
     }

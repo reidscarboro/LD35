@@ -10,6 +10,7 @@ public class Player : Killable {
     };
 
     public GameObject cameraFollowObject;
+    public GameObject invinvibilityIndicator;
 
     //variables
     public float horizontalDamping = 0.5f;
@@ -53,10 +54,13 @@ public class Player : Killable {
     private float footstepFrequency = 0.4f;
 
     private bool dead = false;
+    private bool invincible = false;
 
     protected override void Kill() {
-        GameController.GameOver();
-        dead = true;
+        if (!invincible) {
+            GameController.GameOver();
+            dead = true;
+        }
     }
 
     void Start () {
@@ -75,6 +79,7 @@ public class Player : Killable {
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && form == Form.PERSON && grounded) {
             if (footstepTimer == 0) {
                 SoundController.PlayFootstep();
+                ObjectController.CreateSmallSmoke(transform.position - new Vector3(0, collider.radius));
                 footstepTimer += Time.fixedDeltaTime;
             } else {
                 footstepTimer += Time.fixedDeltaTime;
@@ -120,6 +125,11 @@ public class Player : Killable {
 
     void Update() {
         if (dead) return;
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            invincible = !invincible;
+            invinvibilityIndicator.SetActive(invincible);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && (jumpAvailable || form == Form.BIRD)) {
             Jump();
@@ -248,6 +258,7 @@ public class Player : Killable {
             SoundController.PlayJumpBird();
         } else {
             SoundController.PlayJumpPerson();
+            ObjectController.CreateSmallSmoke(transform.position - new Vector3(0, collider.radius));
         }
         grounded = false;
     }
@@ -279,6 +290,7 @@ public class Player : Killable {
         }
         UpdatePlayerDisplay();
         SoundController.PlayShapeshift();
+        ObjectController.CreateTransformationSmoke(transform.position);
     }
 
     private void SetForm(Form _form) {

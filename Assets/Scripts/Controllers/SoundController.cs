@@ -13,6 +13,7 @@ public class SoundController : MonoBehaviour {
     public AudioClip level_complete;
     public AudioClip shapeshift;
     public AudioClip footstep;
+    public AudioClip boss_shoot;
 
     public AudioSource audioSource;
 
@@ -64,6 +65,12 @@ public class SoundController : MonoBehaviour {
 
     public static void PlayFootstep() {
         instance.audioSource.clip = instance.footstep;
+        instance.audioSource.volume = 1.0f;
+        instance.audioSource.Play();
+    }
+
+    public static void PlayBossShoot() {
+        instance.audioSource.clip = instance.boss_shoot;
         instance.audioSource.volume = 1.0f;
         instance.audioSource.Play();
     }

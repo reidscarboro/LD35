@@ -11,6 +11,10 @@ public class ObjectController : MonoBehaviour {
     public GameObject arrowHit;
     public Fireball fireball;
 
+    public GameObject smallSmoke;
+    public GameObject largeSmoke;
+    public GameObject transformationSmoke;
+
 	void Start () {
         instance = this;
     }
@@ -37,6 +41,18 @@ public class ObjectController : MonoBehaviour {
     public static void CreateArrowHit(Vector3 position, Quaternion rotation, Transform parent) {
         GameObject newArrowHit = (GameObject) Instantiate(instance.arrowHit, position, rotation);
         newArrowHit.transform.SetParent(parent);
+    }
+
+    public static void CreateSmallSmoke(Vector3 position) {
+        Instantiate(instance.smallSmoke, position, Quaternion.identity);
+    }
+
+    public static void CreateLargeSmoke(Vector3 position) {
+        Instantiate(instance.largeSmoke, position, Quaternion.identity);
+    }
+
+    public static void CreateTransformationSmoke(Vector3 position) {
+        Instantiate(instance.transformationSmoke, position, Quaternion.identity);
     }
 
     public static void SetPlayer(Player _player) {

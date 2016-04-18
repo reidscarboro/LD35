@@ -97,5 +97,7 @@ public class Boss : Enemy {
         } else {
             ObjectController.CreateFireball(transform.position, angle, 50);
         }
+
+        SoundController.PlayBossShoot();
     }
 }

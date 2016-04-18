@@ -12,6 +12,7 @@ public class Enemy : Killable {
 
     protected override void Kill() {
         SoundController.PlayEnemyDeath();
+        ObjectController.CreateLargeSmoke(transform.position);
         if (dead != null) {
             dead.transform.SetParent(null);
             RaycastHit2D raycast = Physics2D.Raycast(dead.transform.position, Vector2.down, 100, defaultLayer);
