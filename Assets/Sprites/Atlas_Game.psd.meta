@@ -322,11 +322,6 @@ TextureImporter:
     textureFormat: -1
     compressionQuality: 50
     allowsAlphaSplitting: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    textureFormat: -3
-    compressionQuality: 50
-    allowsAlphaSplitting: 0
   spriteSheet:
     sprites:
     - name: Atlas_Game_0
