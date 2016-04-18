@@ -155,6 +155,8 @@ public class Player : Killable {
 
         UpdatePlayerOrientation();
         UpdateCameraFollowObject();
+
+        if (transform.position.y < -1) Kill();
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
